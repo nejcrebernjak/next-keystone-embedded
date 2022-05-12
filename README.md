@@ -1,4 +1,4 @@
-# Next.js SSG + Keystone.js Embedded Template
+# Next.js SSG + Keystone.js Embedded
 
 Live demo is available [here](https://next-keystone-embedded.netlify.app/).
 
