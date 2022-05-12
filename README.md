@@ -1,5 +1,7 @@
 # next-keystone-embedded
 
+Demo is available [here](https://next-keystone-embedded.netlify.app/).
+
 ## Getting Started
 
 Install dependencies:
