@@ -1,6 +1,5 @@
 import type { GetStaticPropsResult, NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 // Import the generated Lists API and types from Keystone
@@ -38,17 +37,30 @@ const Home: NextPage<IPosts> = ({ posts }) => {
             </>
           ) : (
             <p className={styles.description}>
-              You have no posts yet. 😏 <br />
-              Visit <a href="http://localhost:8000">Admin Panel</a> and create
-              some!
+              You have no posts yet. 😏
+              {process && process.env.NODE_ENV === "development" && (
+                <>
+                  <br />
+                  <span>
+                    Visit <a href="http://localhost:8000">Admin Panel</a> and
+                    create some!
+                  </span>
+                </>
+              )}
             </p>
           )}
         </div>
       </main>
       <footer>
         <p className={styles.description}>
-          Visit <a href="http://localhost:8000">Admin Panel</a> and{" "}
-          <a href="http://localhost:8000/api/graphql">GraphQL</a>.
+          {process && process.env.NODE_ENV === "development" && (
+            <span>
+              <a href="http://localhost:8000" style={{ marginRight: "1rem" }}>
+                Admin Panel
+              </a>
+            </span>
+          )}
+          <a href="/api/graphql">GraphQL</a>
         </p>
       </footer>
     </div>
