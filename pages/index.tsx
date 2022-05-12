@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 // Import the generated Lists API and types from Keystone
 import { query } from ".keystone/api";
 import PostListEntry, { IPostList } from "../components/PostListEntry";
+import Link from "next/link";
 
 interface IPosts {
   posts: Array<IPostList>;
@@ -60,7 +61,7 @@ const Home: NextPage<IPosts> = ({ posts }) => {
               </a>
             </span>
           )}
-          <a href="/api/graphql">GraphQL</a>
+          <Link href="/api/graphql">GraphQL</Link>
         </p>
       </footer>
     </div>
